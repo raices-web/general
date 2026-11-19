@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap');
+@import "tailwindcss";
+
+/*
+  Design tokens — Raíces Transformación
+  Dirección de arte: consultora estratégica boutique — sobria, premium, humana.
+  Paleta definitiva: fondo cálido neutro, verde profundo como primario
+  (títulos y botón principal), gris cálido como texto secundario, terracota
+  como acento (uso restringido). Toda sección nueva debe consumir estos
+  tokens, no hex sueltos.
+
+  Tipografía: Source Serif 4 (weight 600) para titulares —> font-serif.
+  Inter para body/UI —> font-sans.
+*/
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+
+  --color-cream: #f8f5f0;
+  --color-surface-soft: #fbf9f6;
+
+  --color-forest: #2e4e46;
+  --color-forest-light: #4d6962;
+
+  --color-terracota: #c77d59;
+
+  --color-ink: #2a241d;
+  --color-body: #5f6466;
+  --color-border: #e4dacd;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-body);
+}
+
+/*
+  Escala tipográfica — pesos moderados, jerarquía por tamaño,
+  tracking negativo sutil en los estilos display.
+*/
+@utility text-display-xl {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1px;
+
+  @media (min-width: 1024px) {
+    font-size: 52px;
+  }
+}
+
+@utility text-display-md {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+@utility text-title-md {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@utility text-body-md {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@utility text-body-sm {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+}
+
+@utility text-button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@keyframes scroll-raices {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-scroll-raices {
+  animation: scroll-raices 40s linear infinite;
+}

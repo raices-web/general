@@ -1,0 +1,4 @@
+# Mientras el sitio esté en etapa de prueba, que los buscadores no lo indexen.
+# Borrar este archivo al pasar a producción.
+/*
+  X-Robots-Tag: noindex, nofollow

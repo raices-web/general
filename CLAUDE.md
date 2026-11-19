@@ -5,7 +5,7 @@ Landing premium para Raíces (coaching organizacional, raicestransformacion). Re
 
 ## Stack
 - React + Vite + TypeScript + Tailwind CSS
-- Deploy target: Cloudflare Pages (conectado a GitHub, build `npm run build`, salida `dist`). `public/_headers` bloquea la indexación mientras el sitio está en prueba: borrarlo al pasar a producción.
+- Deploy target: Cloudflare Workers con archivos estáticos (conectado a GitHub; config en `wrangler.jsonc`, build `npm run build`, deploy `npx wrangler deploy`, publica `dist`). `public/_headers` bloquea la indexación mientras el sitio está en prueba: borrarlo al pasar a producción.
 - Sin backend (landing estática)
 - Dev server: http://localhost:6651 (puerto fijo, no cambiar)
 
